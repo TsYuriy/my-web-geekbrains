@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300i,400,700')
 
-*
+html, body
+  height: 100%
   margin: 0
   padding: 0
-
-html, body
-    height: 100%
 
 .container
   display: flex
@@ -16,7 +14,7 @@ html, body
   flex: 1
 
 body
-  font-family: "Roboto" sans-serif
+  font-family: 'Roboto' sans-serif
   background-color: #f7f7f7
 
 header
@@ -27,12 +25,13 @@ header
   justify-content: space-around
   align-items: center
 
-header a
-  color: #4d4d4d
-  font-size: 20px
-  font-weight: 100
-  text-align: left
-  text-decoration: none
+header
+  a
+    color: #4d4d4d
+    font-size: 20px
+    font-weight: 100
+    text-align: left
+    text-decoration: none
 
 .content
   padding: 0 3%
@@ -41,9 +40,10 @@ header a
   align-items: center
   flex-wrap: wrap
 
-.venice-img img
-  width: 400px
-  margin-bottom: 3%
+.venice-img
+    img
+      width: 400px
+      margin-bottom: 3%
 
 h1
   color: #2e353d
