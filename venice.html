@@ -4,26 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Личный сайт студента Geekbrains</title>
+    <script src="jquery-3.3.1%20(2).js"></script>
+    <link rel="stylesheet" href="dimsemenov-Magnific-Popup-2ff1692/dist/magnific-popup.css">
+    <script src="dimsemenov-Magnific-Popup-2ff1692/dist/jquery.magnific-popup.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function() {
+            $('.parent-container').magnificPopup({
+                delegate: 'a',
+                type: 'image'
+            });
+            $('#hide-block').hide();
+            // language=JQuery-CSS
+            $('#show-block').on('click', function(){
+                var textLink = $('#hide-block').is(':visible') ? 'Показать блок' : 'Скрыть блок';
+                $('#show-block').text(textLink);
+                $('#hide-block').slideToggle();
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="container">
         <div class="flex1">
             <header>
-                <a href="index.html">Главная</a>
+
+                <a href="#">Главная</a>
                 <a href="#">Венеция</a>
                 <a href="#">Париж</a>
             </header>
             <h1>Личный сайт студента Geekbrains</h1>
-            <div class="content venice-img">
-                <img src="img/venice-1.jpg" alt="photo">
-                <img src="img/venice-2.jpg" alt="photo">
-                <img src="img/venice-3.jpg" alt="photo">
-                <img src="img/venice-4.jpg" alt="photo">
-                <img src="img/venice-5.jpg" alt="photo">
-                <img src="img/venice-6.jpg" alt="photo">
+            <div class="parent-container content venice-img">
+                <a href="img/venice-1.jpg"><img src="img/venice-1.jpg" alt="photo"></a>
+                <a href="img/venice-2.jpg"><img src="img/venice-2.jpg" alt="photo"></a>
+                <a href="img/venice-3.jpg"><img src="img/venice-3.jpg" alt="photo"></a>
+                <a href="img/venice-4.jpg"><img src="img/venice-4.jpg" alt="photo"></a>
+                <a href="img/venice-5.jpg"><img src="img/venice-5.jpg" alt="photo"></a>
+                <a href="img/venice-6.jpg"><img src="img/venice-6.jpg" alt="photo"></a>
             </div>
+            <div id="hide-block" class="parent-container content venice-img">
+                <a href="img/venice-1.jpg"><img src="img/venice-1.jpg" alt="photo"></a>
+                <a href="img/venice-2.jpg"><img src="img/venice-2.jpg" alt="photo"></a>
+                <a href="img/venice-3.jpg"><img src="img/venice-3.jpg" alt="photo"></a>
+                <a href="img/venice-4.jpg"><img src="img/venice-4.jpg" alt="photo"></a>
+                <a href="img/venice-5.jpg"><img src="img/venice-5.jpg" alt="photo"></a>
+                <a href="img/venice-6.jpg"><img src="img/venice-6.jpg" alt="photo"></a>
+            </div>
+            <div class="button"><a id="show-block" href="#">Показать блок</a></div>
         </div>
         <footer>Copyright &copy; 2018</footer>
     </div>
